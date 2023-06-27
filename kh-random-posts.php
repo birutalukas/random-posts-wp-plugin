@@ -40,7 +40,7 @@ function kilo_random_posts_shortcode_handler( $atts, $content = null, $count = '
     $posts = json_decode($jsonArrayResponse);
 
     // Pull only newest items
-    array_splice($posts, $qty);
+    array_splice($posts, (int)$qty);
     ?>
 
     <div class="container py-5">
