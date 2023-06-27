@@ -16,9 +16,9 @@ function kilo_random_posts_shortcode_handler( $atts, $content = null, $count = '
 
     // Declare shortcode's attributes
     $kilo_atts = shortcode_atts( array(
-		'count' => 50,
-		'order' => 'ASC',
-	), $atts );
+		'count' => esc_attr( get_option('kh_quantity') ),
+		'order' => esc_attr( get_option('kh_order') ),
+    ), $atts );
 
     // Get Options
     $title = esc_attr( get_option('kh_title') );
